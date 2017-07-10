@@ -15,7 +15,7 @@
   // load the google gauge visualization
   google.load('visualization', '1', {packages:['gauge']});
   google.setOnLoadCallback(initChart);
-
+  
   // display the data
   function displayData(point) {
     data.setValue(0, 0, gauge_name);
