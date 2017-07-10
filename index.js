@@ -1,7 +1,7 @@
 
 
   // set your channel id here
-  var channel_id = 98643;
+  var channel_id = 114698;
   // set your channel's read api key here if necessary
   var api_key = '';
   // maximum value for the gauge
