@@ -15,7 +15,7 @@
   // load the google gauge visualization
   google.load('visualization', '1', {packages:['gauge']});
   google.setOnLoadCallback(initChart);
-  
+
   // display the data
   function displayData(point) {
     data.setValue(0, 0, gauge_name);
@@ -38,9 +38,9 @@
       else if(data.field1 < 12)
         document.getElementById("yeastState").innerHTML = "It is a tad bit nippy here!"
       else if(data.field1 < 14)
-        document.getElementById("yeastState").innerHTML = "A little warmer and you'll be brewing a lager";
+        document.getElementById("yeastState").innerHTML = "shan <3";
       else if(data.field1 < 18)
-        document.getElementById("yeastState").innerHTML = "It is lager temp! <3";
+        document.getElementById("yeastState").innerHTML = "shan <3";
       else if(data.field1 < 24)
         document.getElementById("yeastState").innerHTML = "Wheeee <3 ";
       else if(data.field1 < 26)
@@ -48,7 +48,7 @@
       else if(data.field1 < 30)
         document.getElementById("yeastState").innerHTML = "Global Warming is real! Nuuuuu :(";
       else if(data.field1 > 30)
-        document.getElementById("yeastState").innerHTML = "I'm a Saison!";
+        document.getElementById("yeastState").innerHTML = "superHOT";
 
 
 
