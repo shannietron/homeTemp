@@ -5,6 +5,12 @@
   	font-family: "Helvetica","Arial", sans-serif;
   	font-size: 60px 
   }
+  h3 { 
+  	text-align: center;
+  	color: grey;
+  	font-family: "Helvetica","Arial", sans-serif;
+  	font-size: 50px 
+  }
   #container { height: 70%; width: 100%; display: table; }
   #inner { vertical-align: middle; display: table-cell; }
   #gauge_div { width: 500px; margin: 0 auto; }

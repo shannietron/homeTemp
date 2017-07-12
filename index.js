@@ -9,6 +9,21 @@
   // name of the gauge
   var gauge_name = 'Temp(ºC)';
 
+  var requestURL = 'http://api.openweathermap.org/data/2.5/weather?lat=40.424&lon=-86.907&appid=fd9c2ee97f1189935a19b6a0d01687d6';
+  var request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  console.print
+
+  request.onload = function() {
+    var openTempResponse = request.response;
+    //console.log(openTemp['main']['temp']);
+    openTempK = openTempResponse['main']['temp'];
+    openTempC = openTempK - 273.15;
+    openTempC4 = openTempC.toPrecision(4);
+}
+
   // global variables
   var chart, charts, data;
 
@@ -37,17 +52,11 @@
         document.getElementById("yeastState").innerHTML = "Brrr, its freeezing in here you blithering fool!";
       else if(data.field1 < 12)
         document.getElementById("yeastState").innerHTML = "It is a tad bit nippy here!"
-      else if(data.field1 < 14)
-        document.getElementById("yeastState").innerHTML = "shan <3";
-      else if(data.field1 < 18)
-        document.getElementById("yeastState").innerHTML = "shan <3";
-      else if(data.field1 < 24)
-        document.getElementById("yeastState").innerHTML = "Wheeee <3 ";
       else if(data.field1 < 26)
         document.getElementById("yeastState").innerHTML = "Did someone say global warming? :O";
       else if(data.field1 < 30)
         document.getElementById("yeastState").innerHTML = "Global Warming is real! Nuuuuu :(";
-      else if(data.field1 > 30)
+      else if(data.field1 > 35)
         document.getElementById("yeastState").innerHTML = "superHOT";
 
 
@@ -58,6 +67,7 @@
         //p = Math.round((p / max_gauge_value) * 100);
         displayData(p);
       }
+      document.getElementById("openWeather").innerHTML = 'OpenWeather Data: '+openTempC4 + 'ºC';
 
     });
   }
