@@ -22,6 +22,8 @@
     openTempK = openTempResponse['main']['temp'];
     openTempC = openTempK - 273.15;
     openTempC4 = openTempC.toPrecision(4);
+    openTempDescr = openTempResponse['weather'][0]['description'];
+  console.log(openTempResponse);
 }
 
   // global variables
@@ -68,7 +70,7 @@
         displayData(p);
       }
       document.getElementById("openWeather").innerHTML = 'OpenWeather Data: '+openTempC4 + 'ºC';
-
+      document.getElementById("openWeatherDescr").innerHTML = openTempDescr;
     });
   }
 
