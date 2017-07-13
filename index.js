@@ -56,7 +56,7 @@
         document.getElementById("yeastState").innerHTML = "It is a tad bit nippy here!"
       else if(data.field1 < 26)
         document.getElementById("yeastState").innerHTML = "Did someone say global warming? :O";
-      else if(data.field1 < 30)
+      else if(data.field1 < 35)
         document.getElementById("yeastState").innerHTML = "Global Warming is real! Nuuuuu :(";
       else if(data.field1 > 35)
         document.getElementById("yeastState").innerHTML = "superHOT";
