@@ -9,7 +9,7 @@
   // name of the gauge
   var gauge_name = 'Temp(ºC)';
 
-  var requestURL = 'http://api.openweathermap.org/data/2.5/weather?lat=40.424&lon=-86.907&appid=fd9c2ee97f1189935a19b6a0d01687d6';
+  var requestURL = 'https://api.openweathermap.org/data/2.5/weather?lat=40.424&lon=-86.907&appid=fd9c2ee97f1189935a19b6a0d01687d6';
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
